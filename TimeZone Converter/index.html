@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Exo:ital,wght@0,200;0,300;1,100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+            <img class="icon-img" src="Images/Icon3.jpeg"/>
+            <b><h1>IN MY TIMEZONE</h1></b>
+    </header>
+  
+    <div class="center">
+
+        <h4>Your current time zone is:</h4>
+        <p id="current-time"></p>
+       
+    
+        
+            <h4>Covert to:</h4>
+            <select id="countries" onchange=getValueOfCountry()>
+                <option>Select a region</option>
+                <option>Africa/Accra</option>
+                <option>Africa/Addis_Ababa</option>
+                <option>Africa/Cairo</option>
+                <option>Africa/Casablanca</option>
+                <option>Africa/Dakar</option>
+                <option>Africa/Freetown</option>
+                <option>Africa/Johannesburg</option>
+                <option>Africa/Kampala</option>
+                <option>Africa/Kigali</option>
+                <option>Africa/Lagos</option>
+                <option>Africa/Lome</option>
+                <option>Africa/Lusaka</option>
+                <option>Africa/Nairobi</option>
+                <option>Africa/Porto-Novo</option>
+                <option>Africa/Sao_Tome</option>
+                <option>Africa/Tunis</option>
+                <option>America/Argentina/Rio_Gallegos</option>
+                <option>America/Porto-Novo</option>
+                <option>America/Chicago</option>
+                <option>America/Costa_Rica</option>
+                <option>America/Denver</option>
+                <option>America/Detroit</option>
+                <option>America/Dominica</option>
+                <option>America/El_Salvador</option>
+                <option>America/Indiana/Indianapolis</option>
+                <option>America/Indiana/Petersburg</option>
+                <option>America/Indianapolis</option>
+                <option>America/Jamaica</option>
+                <option>America/Kentucky/Louisville</option>
+                <option>America/Los_Angeles</option>
+                <option>America/Mexico_City</option>
+                <option>America/Montreal</option>
+                <option>America/New_York</option>
+                <option>America/North_Dakota/New_Salem</option>
+                <option>America/Porto-Novo</option>
+                <option>America/Phoenix</option>
+                <option>America/Puerto_Rico</option>
+                <option>America/Santiago</option>
+                <option>America/Sao_Paulo</option>
+                <option>America/St_Johns</option>
+                <option>America/Thunder_Bay</option>
+                <option>America/Toronto</option>
+                <option>America/Vancouver</option>
+                <option>America/Virgin</option>
+                <option>America/Whitehorse</option>
+                <option>Antarctica/South_Pole</option>
+                <option>Asia/Bangkok</option>
+                <option>Asia/Beirut</option>
+                <option>Asia/Brunei</option>
+                <option>Asia/Colombo</option>
+                <option>Asia/Damascus</option>
+                <option>Asia/Dhaka</option>
+                <option>Asia/Dubai</option>
+                <option>Asia/Gaza</option>
+                <option>Asia/Hebron</option>
+                <option>Asia/Hong_Kong</option>
+                <option>Asia/Istanbul</option>
+                <option>Asia/Jerusalem</option>
+                <option>Asia/Kabul</option>
+                <option>Asia/Kuala_Lumpur</option>
+                <option>Asia/Kuwait</option>
+                <option>Asia/Pyongyang</option>
+                <option>Asia/Qatar</option>
+                <option>Asia/Seoul</option>
+                <option>Asia/Shanghai</option>
+                <option>Asia/Singapore</option>
+                <option>Asia/Taipei</option>
+                <option>Asia/Tel_Aviv</option>
+                <option>Asia/Tokyo</option>
+                <option>Atlantic/Bermuda</option>
+                <option>Atlantic/Cape_Verde</option>
+                <option>Atlantic/South_Georgia</option>
+                <option>Australia/Broken_Hill</option>
+                <option>Australia/Melbourne</option>
+                <option>Australia/Queensland</option>
+                <option>Australia/South</option>
+                <option>Australia/Sydney</option>
+                <option>Australia/West</option>
+                <option>Brazil/Acre</option>
+                <option>Brazil/East</option>
+                <option>Brazil/West</option>
+                <option>Canada/Atlantic</option>
+                <option>Canada/Central</option>
+                <option>Canada/Eastern</option>
+                <option>Canada/Pacific</option>
+                <option>Canada/Saskatchewan</option>
+                <option>Canada/Yukon</option>
+                <option>Chile/Continental</option>
+                <option>Chile/EasterIsland</option>
+                <option>Cuba</option>
+                <option>Egypt</option>
+                <option>Europe/Amsterdam</option>
+                <option>Europe/Athens</option>
+                <option>Europe/Belfast</option>
+                <option>Europe/Belgrade</option>
+                <option>Europe/Brussels</option>
+                <option>Europe/Bucharest</option>
+                <option>Europe/Budapest</option>
+                <option>Europe/Berlin</option>
+                <option>Europe/Copenhagen</option>
+                <option>Europe/Dublin</option>
+                <option>Europe/Helsinki</option>
+                <option>Europe/Istanbul</option>
+                <option>Europe/Jersey</option>
+                <option>Europe/Kyiv</option>
+                <option>Europe/Lisbon</option>
+                <option>Europe/London</option>
+                <option>Europe/Luxembourg</option>
+                <option>Europe/Madrid</option>
+                <option>Europe/Malta</option>
+                <option>Europe/Monaco</option>
+                <option>Europe/Moscow</option>
+                <option>Europe/Oslo</option>
+                <option>Europe/Paris</option>
+                <option>Europe/Prague</option>
+                <option>Europe/Rome</option>
+                <option>Europe/Stockholm</option>
+                <option>Europe/Ulyanovsk</option>
+                <option>Europe/Vatican</option>
+                <option>Europe/Vienna</option>
+                <option>Europe/Warsaw</option>
+                <option>Europe/Zurich</option>
+                <option>Greenwich</option>
+                <option>Hongkong</option>
+                <option>Iceland</option>
+                <option>Indian/Christmas</option>
+                <option>Indian/Maldives</option>
+                <option>Indian/Mauritius</option>
+                <option>Indian/Mayotte</option>
+                <option>Indian/Reunion</option>
+                <option>Iran</option>
+                <option>Israel</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Libya</option>
+                <option>Mexico/General</option>
+                <option>Pacific/Auckland</option>
+                <option>Pacific/Chatham</option>
+                <option>Pacific/Easter</option>
+                <option>Pacific/Guam</option>
+                <option>Pacific/Midway</option>
+                <option>Pacific/Pohnpei</option>
+                <option>Pacific/Port_Moresby</option>
+                <option>Pacific/Saipan</option>
+                <option>Pacific/Samoa</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Singapore</option>
+                <option>Turkey</option>
+                <option>US/Arizona</option>
+                <option>US/Alaska</option>
+                <option>US/Central</option>
+                <option>US/East-Indiana</option>
+                <option>US/Hawaii</option>
+                <option>US/Michigan</option>
+                <option>US/Pacific</option>
+                <option>US/Samoa</option>
+                <option>Zulu</option>
+        
+            </select>
+        
+            <button id="convert-btn" >Convert</button>
+        
+            <p id="converted-time">Please select a region above</p>
+            <p id="display-converted-time">Here</p>
+            
+       
+       
+      
+    </div>   
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
